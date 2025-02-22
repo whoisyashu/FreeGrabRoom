@@ -18,9 +18,7 @@ bot.on("ready", () => {
     bot.player.teleport(bot.info.user.id, 14.5, 8.25, 17.5, Facing.FrontLeft);
     
 });
-setInterval(() => {
-    bot.message.send("\n🎉 Welcome to the Free Grab Room!🎉\n🔹 Use !join to join the queue.\n🔹 Use !help to see all available commands.\n\n🚀 Enjoy and have fun!");
-}, 90000);
+
 bot.on("playerJoin",(user)=>{
     bot.message.send("\n🎉 Welcome to the Free Grab Room! 🎉\n🔹 Use !join to join the queue.\n🔹 Use !help to see all available commands.\n\n🚀 Enjoy and have fun!");
 });

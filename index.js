@@ -33,7 +33,7 @@ bot.on("chatCreate", async (user, message) => {
       try {
         // Get target user ID
         const targetId = await bot.room.players.id(targetUsername);
-        if (!targetId) {
+        if (!targetId || targetId === bot.info.user.id) {
           return bot.whisper.send(user.id, "User not found.");
         }
   

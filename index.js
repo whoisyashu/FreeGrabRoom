@@ -225,8 +225,7 @@ const emotes = {
   shy: { id: "emote-shy2", duration: 5 },
   anime: { id: "dance-anime", duration: 7.8 },
 };
-// Promote the Free Grab Room every 2 minutes
-
+const emotePages = Math.ceil(Object.keys(emotes).length / 7);
 bot.on("chatCreate", async (user, message) => {
     const args = message.toLowerCase().split(" "); // Convert input to lowercase
     const command = args[0];
